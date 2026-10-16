@@ -38,8 +38,15 @@ jobs:
 
             - name: Download dependencies
               run: |
-                  go mod download
-                  hugo mod get
+                  for attempt in 1 2 3; do
+                    echo "Dependency download attempt ${attempt}/3"
+                    if GOPROXY=https://proxy.golang.org,direct go mod download && \
+                      GOPROXY=https://proxy.golang.org,direct hugo mod get; then
+                      exit 0
+                    fi
+                    sleep 10
+                  done
+                  exit 1
 
             - name: Build with Hugo
               run: |
