@@ -3,7 +3,7 @@ name: Telegram notification
 on:
     workflow_run:
         workflows:
-            - Deploy to GitHub Pages
+            - Deploy to AWS
             - Publish Docker Image
         branches:
             - main
