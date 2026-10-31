@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.9] - 2026-10-31
+
+### Changed
+
+- Pin production image obfuscation to AboutMe theme `v0.4.4`, avoiding repeated scans of each built asset for every replacement token.
+
 ## [2.0.8] - 2026-10-31
 
 ### Fixed

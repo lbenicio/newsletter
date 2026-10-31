@@ -35,7 +35,7 @@ COPY . .
 RUN hugo mod get
 
 RUN hugo --minify --environment production --cleanDestinationDir
-RUN go run github.com/lbenicio/aboutme-v2-theme/cmd/obfuscate@latest ./public || true
+RUN GOPROXY=direct go run github.com/lbenicio/aboutme-v2-theme/cmd/obfuscate@v0.4.4 ./public || true
 
 # Stage 2 — serve
 FROM nginx:alpine
