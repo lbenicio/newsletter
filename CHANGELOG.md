@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+## [2.0.4] - 2026-10-31
+
+### Changed
+
+- Bumped the project patch version to `2.0.4`.
+- Routed AWS deployment through GitHub’s `production` environment, restricted to the `main` branch.
+- Updated the Docker release workflow to use `docker/login-action` 4.7.0.
+
 ## [2.0.3] - 2026-10-16
 
 ### Added
