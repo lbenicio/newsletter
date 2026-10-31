@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.5] - 2026-10-31
+
+### Fixed
+
+- Pinned the GHCR Docker build to the same checksum-verified Hugo Extended release used by the AWS deployment workflow, fixing unsupported template methods.
+
 ## [2.0.4] - 2026-10-31
 
 ### Changed
