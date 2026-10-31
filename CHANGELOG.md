@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.6] - 2026-10-31
+
+### Fixed
+
+- Run the checksum-verified Hugo binary in a glibc-compatible builder and support both amd64 and arm64 image builds.
+
 ## [2.0.5] - 2026-10-31
 
 ### Fixed
