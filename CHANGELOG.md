@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.8] - 2026-10-31
+
+### Fixed
+
+- Fixed GHCR image handoff: preserve all generated tags in the Docker archive, push each tag from its artifact, and fail the export step when Docker save fails.
+
 ## [2.0.7] - 2026-10-31
 
 ### Fixed
