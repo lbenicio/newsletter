@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.7] - 2026-10-31
+
+### Fixed
+
+- Push each newline-separated GHCR image tag directly from the tags artifact instead of passing multiline tags through a single-line GitHub output.
+
 ## [2.0.6] - 2026-10-31
 
 ### Fixed
