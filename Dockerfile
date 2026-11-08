@@ -1,5 +1,5 @@
 # Stage 1 — build the site
-FROM golang:1.26.4-bookworm AS build
+FROM golang:1.27.0-bookworm AS build
 
 ARG HUGO_VERSION=0.168.0
 ARG HUGO_SHA256_AMD64=787f100057328824f38c6ad7c87ff10d6451ae0a7bc39cedaad0dd2bcde17e53
@@ -35,7 +35,7 @@ COPY . .
 RUN hugo mod get
 
 RUN hugo --minify --environment production --cleanDestinationDir
-RUN GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.4.4 ./public || true
+RUN GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.5.0 ./public || true
 
 # Stage 2 — serve
 FROM nginx:alpine
