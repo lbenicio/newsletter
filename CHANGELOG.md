@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.10] - 2026-11-11
+
+### Changed
+
+- Upgrade the shared Hugo theme to `v0.6.0` and install Dart Sass in GitHub Actions and Docker builds.
+
 ## [2.0.9] - 2026-10-31
 
 ### Changed

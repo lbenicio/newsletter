@@ -33,6 +33,19 @@ jobs:
                   hugo-version: "0.168.0"
                   extended: true
 
+            - name: Install Dart Sass
+              env:
+                  DART_SASS_VERSION: 1.108.0
+                  DART_SASS_SHA256: e608a6a633af36ab518919b502581d891d50a05e3adf5bd541e977ab6a4a92a1
+              run: |
+                  curl --fail --silent --show-error --location \
+                    "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" \
+                    --output "${RUNNER_TEMP}/dart-sass.tar.gz"
+                  echo "${DART_SASS_SHA256}  ${RUNNER_TEMP}/dart-sass.tar.gz" | sha256sum -c -
+                  tar -xzf "${RUNNER_TEMP}/dart-sass.tar.gz" -C "${RUNNER_TEMP}"
+                  echo "${RUNNER_TEMP}/dart-sass" >> "$GITHUB_PATH"
+                  "${RUNNER_TEMP}/dart-sass/sass" --version
+
             - name: Setup Go
               uses: actions/setup-go@v7
               with:
@@ -62,7 +75,7 @@ jobs:
                   hugo --minify --environment production --cleanDestinationDir --config hugo.toml,/tmp/hugo-dynamic.toml --logLevel info
 
             - name: Obfuscate
-              run: GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.0.0-20261108201809-10c20d4001e1 -verbose ./public
+              run: GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.6.0 -verbose ./public
 
             - name: Configure AWS credentials
               uses: aws-actions/configure-aws-credentials@v6
