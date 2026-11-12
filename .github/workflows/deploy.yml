@@ -20,7 +20,9 @@ env:
 jobs:
     deploy:
         runs-on: ubuntu-24.04
-        environment: production
+        environment:
+            name: production
+            url: ${{ env.SITE_URL }}
         steps:
             - name: Checkout
               uses: actions/checkout@v7
