@@ -63,10 +63,12 @@ newsletterCheckboxId = "5e6df"
 newsletterCheckboxValue = "5e6df944-ee28-4612-a16f-72838fe90224"
 newsletterCheckboxName = "l"
 
-# Umami analytics
-umamiWebsiteId = "c3cde340-7e81-480f-a38a-dc20a57081fa"
-umamiScriptUrl = "https://analytics.4686189.xyz/script.js"
-
 # Legal links
 privacyUrl = "https://legal.lbenicio.dev/docs/privacy-policy"
 termsUrl = "https://legal.lbenicio.dev/docs/terms-of-service"
+
+[services.googleAnalytics]
+id = "G-GGWN56N2C4"
+
+[privacy.googleAnalytics]
+respectDoNotTrack = true
