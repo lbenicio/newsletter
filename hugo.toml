@@ -58,10 +58,7 @@ appMode = "SINGLE"
 singleContent = "content/single/newsletter.md"
 
 # Newsletter
-newsletterPostUrl = "https://mail.4686189.xyz/subscription/form"
-newsletterCheckboxId = "5e6df"
-newsletterCheckboxValue = "5e6df944-ee28-4612-a16f-72838fe90224"
-newsletterCheckboxName = "l"
+newsletterPostUrl = "https://mailing.api.lbenicio.dev/subscribe"
 
 # Legal links
 privacyUrl = "https://legal.lbenicio.dev/docs/privacy-policy"
