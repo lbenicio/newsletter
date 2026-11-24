@@ -1,6 +1,6 @@
 title = "Leonardo Benicio — Newsletter"
 theme = "github.com/lbenicio/theme"
-baseURL = "/"
+baseURL = "https://newsletter.lbenicio.dev/"
 version = "2.0.10"
 locale = "en-us"
 resourceDir = "resources"
@@ -52,7 +52,7 @@ githubHandler = "lbenicio"
 linkedinHandler = "leonardo-benicio"
 twitterHandler = "lbenicio_"
 
-# Site (overridden by CI via /tmp/hugo-dynamic.toml)
+# Production site URL
 siteUrl = "https://newsletter.lbenicio.dev/"
 appMode = "SINGLE"
 singleContent = "content/single/newsletter.md"
