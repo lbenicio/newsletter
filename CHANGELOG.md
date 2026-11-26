@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Use theme `v0.7.1`, including the production Google Ads tag integration.
+
 ## [2.0.10] - 2026-11-11
 
 ### Changed

@@ -50,7 +50,7 @@ COPY . .
 RUN hugo mod get
 
 RUN hugo --minify --environment production --cleanDestinationDir
-RUN GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.6.0 ./public || true
+RUN GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.7.1 ./public || true
 
 # Stage 2 — serve
 FROM nginx:alpine
