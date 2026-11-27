@@ -47,6 +47,6 @@ hugo --minify --environment production --cleanDestinationDir \
     --config hugo.toml --logLevel info
 
 echo "Obfuscating generated site assets"
-GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.7.1 -verbose ./public
+GOPROXY=direct go run github.com/lbenicio/theme/cmd/obfuscate@v0.7.2 -verbose ./public
 
 echo "Cloudflare build complete: $(find public -type f | wc -l | tr -d ' ') files"
